@@ -9,8 +9,8 @@ RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 PERFIL = {
     "nome": "Urbano Pedrito Estrela da Silva Neto",
     "github": "https://github.com/urbanoestrela",
-    "linkedin": "",   # ex.: "https://www.linkedin.com/in/seu-perfil"
-    "email": "",      # ex.: "voce@exemplo.com"
+    "linkedin": "https://www.linkedin.com/in/urbano-e-467260116/",
+    "email": "estrela.urbano@gmail.com",
 }
 
 E = html.escape
@@ -426,3 +426,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
