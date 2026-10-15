@@ -332,7 +332,7 @@ def page(L, key, title, desc, body, wide_title=None):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}assets/css/site.css">
+<link rel="stylesheet" href="{root}assets/css/site.css?v=20261015b">
 <link rel="icon" href="{root}assets/img/icone.svg" type="image/svg+xml">
 </head>
 <body data-root="{root}">
@@ -345,7 +345,7 @@ def page(L, key, title, desc, body, wide_title=None):
 </main>
 <footer><div class="wrap"><span>{E(PERFIL["nome"])}</span><span>{E(T["foot"])}</span></div></footer>
 <noscript><div class="wrap noscript">JavaScript</div></noscript>
-<script src="{root}assets/js/demos.js" defer></script>
+<script src="{root}assets/js/demos.js?v=20261015b" defer></script>
 </body>
 </html>
 """
