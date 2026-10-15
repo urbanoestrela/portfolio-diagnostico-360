@@ -540,12 +540,12 @@
   fetch(ROOT + "assets/data/rede.json").then((r) => r.json()).then((d) => { D = d; boot(); })
     .catch(() => document.querySelectorAll("[data-demo] .demo-body").forEach((b) => (b.textContent = LANG === "en" ? "Could not load the data file." : "Não foi possível carregar os dados.")));
 
-  // tema claro/escuro (preferência do visitante, só neste navegador)
+  // O portfólio abre claro; a escolha do visitante fica salva neste navegador.
   const btn = document.querySelector(".theme-btn");
   if (btn) {
     try { const sv = localStorage.getItem("tema"); if (sv) document.documentElement.dataset.theme = sv; } catch (e) { /* sem armazenamento */ }
     btn.addEventListener("click", () => {
-      const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      const dark = document.documentElement.dataset.theme === "dark";
       document.documentElement.dataset.theme = dark ? "light" : "dark";
       try { localStorage.setItem("tema", document.documentElement.dataset.theme); } catch (e) { /* ok */ }
       if (D) { document.querySelectorAll("[data-demo]").forEach((host) => { const b = host.querySelector(".demo-body"); const c = host.querySelector(".controls"); if (c) clear(c); if (b) clear(b); }); boot(); }
